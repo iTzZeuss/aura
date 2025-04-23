@@ -5,10 +5,10 @@ import { Link } from "expo-router";
 export default function App() {
   return (
     <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-6xl color-blue-600">Aura</Text>
+      <Text className="text-6xl color-blue-600 font-pblack">Aura</Text>
       <StatusBar style="auto" />
-      <Link href="/profile" className="color-black mt-96">
-        Go to profile
+      <Link href="/home" className="color-black mt-96">
+        Go to home
       </Link>
     </View>
   );
