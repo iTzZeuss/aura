@@ -1,15 +1,31 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View, Image } from "react-native";
 import { Link } from "expo-router";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { images } from "../constants";
 
 export default function App() {
   return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-6xl color-blue-600 font-pblack">Aura</Text>
-      <StatusBar style="auto" />
-      <Link href="/home" className="color-black mt-96">
-        Go to home
-      </Link>
-    </View>
+    <SafeAreaView className="bg-primary h-full">
+      <ScrollView contentContainerStyle={{ height: "100%" }}>
+        <View className="w-full justify-center items-center h-full px-4">
+          <Image
+            source={images.logo}
+            className="w-[370px] h-[370px] mr-8 -mt-[460px]"
+          />
+          <View className="relative -mt-[100px]">
+            <Text className="text-white font-bold text-2xl text-center">
+              Get educated quickly from any book with{" "}
+              <Text className="text-blue-400 text-[25px]">Aura</Text>
+            </Text>{" "}
+            <Image
+              source={images.path}
+              className="absolute w-[130px] h-[100px] left-[153px] top-[5px]"
+              resizeMode="contain"
+            />
+          </View>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
