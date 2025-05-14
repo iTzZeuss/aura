@@ -24,7 +24,7 @@ export default function App() {
 
             <Image
               source={images.path}
-              className="absolute w-[130px] h-[100px] top-[4px] right-12"
+              className="absolute w-[130px] h-[100px] top-[3px] right-[62px]"
               resizeMode="contain"
             />
 
@@ -32,7 +32,7 @@ export default function App() {
               <CustomButton
                 handlePress={() => router.push("/sign-in")}
                 title={"Continue with email."}
-                containerStyles={""}
+                containerStyles={"mt-24"}
               />
             </View>
           </View>
